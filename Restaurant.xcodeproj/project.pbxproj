@@ -54,14 +54,46 @@
 		52365C32231AA680009CEC96 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				52365C33231AA680009CEC96 /* AppDelegate.swift */,
-				52365C35231AA680009CEC96 /* ViewController.swift */,
-				52365C37231AA680009CEC96 /* Main.storyboard */,
-				52365C3A231AA682009CEC96 /* Assets.xcassets */,
-				52365C3C231AA682009CEC96 /* LaunchScreen.storyboard */,
-				52365C3F231AA682009CEC96 /* Info.plist */,
+				52365C45231AA6C2009CEC96 /* App */,
+				52365C46231AA6D9009CEC96 /* Controllers */,
+				52365C48231AA707009CEC96 /* Resources */,
+				52365C47231AA6F6009CEC96 /* Storyboards */,
 			);
 			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		52365C45231AA6C2009CEC96 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52365C33231AA680009CEC96 /* AppDelegate.swift */,
+				52365C3F231AA682009CEC96 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		52365C46231AA6D9009CEC96 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52365C35231AA680009CEC96 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52365C47231AA6F6009CEC96 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				52365C37231AA680009CEC96 /* Main.storyboard */,
+				52365C3C231AA682009CEC96 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		52365C48231AA707009CEC96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52365C3A231AA682009CEC96 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K285D3RL3;
-				INFOPLIST_FILE = Restaurant/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Restaurant/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K285D3RL3;
-				INFOPLIST_FILE = Restaurant/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Restaurant/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
