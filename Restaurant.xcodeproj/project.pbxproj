@@ -14,6 +14,7 @@
 		52365C4B231AAF93009CEC96 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52365C4A231AAF93009CEC96 /* Categories.swift */; };
 		52365C4E231AB091009CEC96 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52365C4D231AB091009CEC96 /* NetworkManager.swift */; };
 		52365C50231B05C9009CEC96 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52365C4F231B05C9009CEC96 /* MenuTableViewController.swift */; };
+		52365C52231B0F4C009CEC96 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52365C51231B0F4C009CEC96 /* CellManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		52365C4A231AAF93009CEC96 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		52365C4D231AB091009CEC96 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		52365C4F231B05C9009CEC96 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		52365C51231B0F4C009CEC96 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,10 @@
 		52365C32231AA680009CEC96 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				52365C4C231AB04E009CEC96 /* Manager */,
-				52365C49231AAF64009CEC96 /* Models */,
 				52365C45231AA6C2009CEC96 /* App */,
 				52365C46231AA6D9009CEC96 /* Controllers */,
+				52365C4C231AB04E009CEC96 /* Manager */,
+				52365C49231AAF64009CEC96 /* Models */,
 				52365C48231AA707009CEC96 /* Resources */,
 				52365C47231AA6F6009CEC96 /* Storyboards */,
 			);
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				52365C4D231AB091009CEC96 /* NetworkManager.swift */,
+				52365C51231B0F4C009CEC96 /* CellManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				52365C4E231AB091009CEC96 /* NetworkManager.swift in Sources */,
 				52365C34231AA680009CEC96 /* AppDelegate.swift in Sources */,
 				52365C4B231AAF93009CEC96 /* Categories.swift in Sources */,
+				52365C52231B0F4C009CEC96 /* CellManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

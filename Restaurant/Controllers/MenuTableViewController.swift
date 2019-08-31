@@ -9,20 +9,38 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    let networkManager = NetworkManager()
     
+    //MARK: - Properties
+    let networkManager = NetworkManager()
+    var categories = [String]()
+    
+    //MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         networkManager.getCategories { (categories, error) in
-            if let categories = categories {
-                print(#line, #function, categories)
-            } else {
+            guard let categories = categories else {
                 if let error = error {
                     print(#line, #function, "ERROR:", error.localizedDescription)
                 } else {
                     print(#line, #function, "ERROR: Can't load categories")
                 }
+                return
+            }
+            
+            self.categories = categories
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
+        cell.textLabel?.text = categories[indexPath.row]
+        return cell
     }
 }
