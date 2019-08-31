@@ -17,6 +17,7 @@
 		52365C52231B0F4C009CEC96 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52365C51231B0F4C009CEC96 /* CellManager.swift */; };
 		5275EAF3231B2A5D0061DC28 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275EAF2231B2A5D0061DC28 /* MenuItem.swift */; };
 		5275EAF5231B2A970061DC28 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275EAF4231B2A970061DC28 /* MenuItems.swift */; };
+		5275EAF8231B2E1F0061DC28 /* URL + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275EAF7231B2E1F0061DC28 /* URL + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		52365C51231B0F4C009CEC96 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
 		5275EAF2231B2A5D0061DC28 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		5275EAF4231B2A970061DC28 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
+		5275EAF7231B2E1F0061DC28 /* URL + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		52365C32231AA680009CEC96 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				5275EAF6231B2DEF0061DC28 /* Extensions */,
 				52365C45231AA6C2009CEC96 /* App */,
 				52365C46231AA6D9009CEC96 /* Controllers */,
 				52365C4C231AB04E009CEC96 /* Manager */,
@@ -125,6 +128,14 @@
 				52365C51231B0F4C009CEC96 /* CellManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		5275EAF6231B2DEF0061DC28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5275EAF7231B2E1F0061DC28 /* URL + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				52365C50231B05C9009CEC96 /* MenuTableViewController.swift in Sources */,
 				52365C4E231AB091009CEC96 /* NetworkManager.swift in Sources */,
 				52365C34231AA680009CEC96 /* AppDelegate.swift in Sources */,
+				5275EAF8231B2E1F0061DC28 /* URL + Extension.swift in Sources */,
 				5275EAF3231B2A5D0061DC28 /* MenuItem.swift in Sources */,
 				5275EAF5231B2A970061DC28 /* MenuItems.swift in Sources */,
 				52365C4B231AAF93009CEC96 /* Categories.swift in Sources */,

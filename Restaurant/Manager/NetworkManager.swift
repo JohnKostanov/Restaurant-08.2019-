@@ -9,10 +9,10 @@
 import Foundation
 
 class NetworkManager {
-    let initialURL = URL(string: "http://server.getoutfit.ru:8090")!
+    let baseURL = URL(string: "http://server.getoutfit.ru:8090")!
     
     func getCategories(completion: @escaping ([String]?, Error?) -> Void) {
-         let url = initialURL.appendingPathComponent("categories")
+         let url = baseURL.appendingPathComponent("categories")
         let task = URLSession.shared.dataTask(with: url) {data, _, error in
             guard let data = data else {
                 completion(nil, error)
@@ -29,5 +29,14 @@ class NetworkManager {
             
         }
         task.resume()
+    }
+    
+    func getMenuItems(for category: String, completion: @escaping ([MenuItem]?, Error?) -> Void) {
+        let initialUrl = baseURL.appendingPathComponent("menu")
+        guard let url = initialUrl.withQueries(["category": category]) else {
+            completion(nil, nil)
+            return
+        }
+        
     }
 }
