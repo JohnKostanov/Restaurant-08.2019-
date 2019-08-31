@@ -11,6 +11,7 @@ import UIKit
 class MenuTableViewController: UITableViewController {
     
     //MARK: - Properties
+    let cellManager = CellManager()
     let networkManager = NetworkManager()
     var categories = [String]()
     
@@ -40,7 +41,7 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row]
+        cellManager.configure(cell, with: categories[indexPath.row])
         return cell
     }
 }

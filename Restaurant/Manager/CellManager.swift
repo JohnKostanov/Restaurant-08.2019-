@@ -6,4 +6,10 @@
 //  Copyright © 2019 John Kostanov. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class CellManager {
+    func configure(_ cell: UITableViewCell, with category: String) {
+        cell.textLabel?.text = category.localizedCapitalized
+    }
+}
