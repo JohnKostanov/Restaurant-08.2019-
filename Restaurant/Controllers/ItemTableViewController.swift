@@ -47,7 +47,7 @@ class ItemTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
         let menuItem = menuItems[indexPath.row]
-        cellManager.configure(cell, with: menuItem)
+        cellManager.configure(cell, with: menuItem, for: tableView, indexPath: indexPath)
         return cell
     }
 }
