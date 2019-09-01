@@ -78,7 +78,7 @@
         <!--Menu-->
         <scene sceneID="J3y-nA-4vB">
             <objects>
-                <tableViewController id="3Gs-ts-GAG" customClass="MenuTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3Gs-ts-GAG" customClass="CategoryTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9qj-gp-Eid">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,7 @@
         <!--Category-->
         <scene sceneID="TSl-Af-MxS">
             <objects>
-                <tableViewController id="Z4k-mo-pII" customClass="ItemTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Z4k-mo-pII" customClass="MenuTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F7O-Pt-0bM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,16 +164,71 @@
             </objects>
             <point key="canvasLocation" x="2197.1014492753625" y="60.9375"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="kod-5T-NfX">
             <objects>
-                <viewController id="dUJ-Y4-bnF" sceneMemberID="viewController">
+                <viewController id="dUJ-Y4-bnF" customClass="ItemViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJo-Qh-66P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vnT-Eh-pQa">
+                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kpx-f0-720">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="332.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p9W-Kf-Sjy">
+                                        <rect key="frame" x="0.0" y="352.5" width="374" height="332.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="$ 12.75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nY-kv-sX1">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vc-EI-HDT">
+                                                <rect key="frame" x="0.0" y="30" width="374" height="252.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCH-T4-UWv">
+                                                <rect key="frame" x="0.0" y="282.5" width="374" height="50"/>
+                                                <color key="backgroundColor" red="0.051884430129999999" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Jge-Oz-bia"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Add to Order">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="orderButtonTapped:" destination="dUJ-Y4-bnF" eventType="touchUpInside" id="ERe-7N-0zN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vnT-Eh-pQa" firstAttribute="leading" secondItem="Xl0-xX-n7q" secondAttribute="leading" constant="20" id="Ncv-f4-7Xj"/>
+                            <constraint firstItem="Xl0-xX-n7q" firstAttribute="trailing" secondItem="vnT-Eh-pQa" secondAttribute="trailing" constant="20" id="cVL-RT-9B0"/>
+                            <constraint firstItem="vnT-Eh-pQa" firstAttribute="top" secondItem="Xl0-xX-n7q" secondAttribute="top" constant="20" id="x1T-FQ-VV9"/>
+                            <constraint firstItem="Xl0-xX-n7q" firstAttribute="bottom" secondItem="vnT-Eh-pQa" secondAttribute="bottom" constant="20" id="ydA-cY-fUU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xl0-xX-n7q"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="Vrs-mn-KPX"/>
+                    <connections>
+                        <outlet property="addToOrderButton" destination="oCH-T4-UWv" id="lNV-Xd-nI0"/>
+                        <outlet property="detailTextLabel" destination="8vc-EI-HDT" id="xpz-Br-QID"/>
+                        <outlet property="imageView" destination="kpx-f0-720" id="Yi7-gg-yNP"/>
+                        <outlet property="priceLabel" destination="2nY-kv-sX1" id="dcQ-XC-OWl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0f-hY-5dP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
