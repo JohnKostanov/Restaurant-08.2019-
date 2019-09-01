@@ -11,10 +11,12 @@ import UIKit
 class ItemTableViewController: UITableViewController {
     
     //MARK: - Properties
+    let cellManager = CellManager()
     let networkManager = NetworkManager()
     var category: String!
-    var menuItems = [MenuItems]()
+    var menuItems = [MenuItem]()
     
+    // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = category.localizedCapitalized
@@ -30,7 +32,22 @@ class ItemTableViewController: UITableViewController {
                 
                 return
             }
-            print(#line, #function, menuItems)
+            self.menuItems = menuItems
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
+    }
+    
+    // MARK: - UITableviewControllerDataSource
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        let menuItem = menuItems[indexPath.row]
+        cellManager.configure(cell, with: menuItem)
+        return cell
     }
 }
