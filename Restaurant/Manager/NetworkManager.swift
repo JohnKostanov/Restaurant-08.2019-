@@ -6,7 +6,7 @@
 //  Copyright © 2019 John Kostanov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     let baseURL = URL(string: "http://server.getoutfit.ru:8090")!
@@ -53,5 +53,23 @@ class NetworkManager {
         }
         task.resume()
         
+    }
+    
+    func getImage(_ initialURL: URL, completion: @escaping (UIImage?, Error?) -> Void) {
+        var componets = URLComponents(url: initialURL, resolvingAgainstBaseURL: true)
+        componets?.host = baseURL.host
+        guard let url = componets?.url else {
+            completion(nil, nil)
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data else {
+                completion(nil, error)
+                return
+            }
+            let image = UIImage(data: data)
+            completion(image, nil)
+        }
+        task.resume()
     }
 }
