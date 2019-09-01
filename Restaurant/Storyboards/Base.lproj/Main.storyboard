@@ -101,7 +101,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Z4k-mo-pII" kind="show" identifier="ItemSegue" id="7pK-sZ-SDt"/>
+                                    <segue destination="Z4k-mo-pII" kind="show" identifier="MenuSegue" id="7pK-sZ-SDt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="60.9375"/>
         </scene>
-        <!--Category-->
+        <!--Category Menu-->
         <scene sceneID="TSl-Af-MxS">
             <objects>
                 <tableViewController id="Z4k-mo-pII" customClass="MenuTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,7 +149,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="dUJ-Y4-bnF" kind="show" id="Wrs-ib-Ddb"/>
+                                    <segue destination="dUJ-Y4-bnF" kind="show" identifier="ItemSegue" id="Wrs-ib-Ddb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -158,7 +158,7 @@
                             <outlet property="delegate" destination="Z4k-mo-pII" id="dbK-95-Vhy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Category" id="OiP-sA-kQf"/>
+                    <navigationItem key="navigationItem" title="Category Menu" id="OiP-sA-kQf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNu-kZ-JJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
