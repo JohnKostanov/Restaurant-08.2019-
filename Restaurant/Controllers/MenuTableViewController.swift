@@ -15,7 +15,7 @@ class MenuTableViewController: UITableViewController {
     let networkManager = NetworkManager()
     var categories = [String]()
     
-    //MARK: - Methods
+    //MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         networkManager.getCategories { (categories, error) in
@@ -35,6 +35,15 @@ class MenuTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Navigations Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "ItemSegue" else { return }
+        guard let categoryIndex = tableView.indexPathForSelectedRow else { return }
+        let destination = segue.destination as! ItemTableViewController
+        destination.category = categories[categoryIndex.row]
+    }
+    
+    // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }

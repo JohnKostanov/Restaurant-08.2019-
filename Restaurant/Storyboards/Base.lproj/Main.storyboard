@@ -13,7 +13,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="i34-lU-fSA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e54-h1-aO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="XMN-Y2-Yqi" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3vM-Bc-oHC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -25,6 +24,7 @@
                         <segue destination="glS-AD-lDp" kind="relationship" relationship="viewControllers" id="NEf-Vy-aAV"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e54-h1-aO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-412" y="375"/>
         </scene>
@@ -101,7 +101,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Z4k-mo-pII" kind="show" id="7pK-sZ-SDt"/>
+                                    <segue destination="Z4k-mo-pII" kind="show" identifier="ItemSegue" id="7pK-sZ-SDt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="60.9375"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Category-->
         <scene sceneID="TSl-Af-MxS">
             <objects>
-                <tableViewController id="Z4k-mo-pII" sceneMemberID="viewController">
+                <tableViewController id="Z4k-mo-pII" customClass="ItemTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F7O-Pt-0bM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,6 +158,7 @@
                             <outlet property="delegate" destination="Z4k-mo-pII" id="dbK-95-Vhy"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Category" id="OiP-sA-kQf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNu-kZ-JJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

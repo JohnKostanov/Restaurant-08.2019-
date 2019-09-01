@@ -37,6 +37,21 @@ class NetworkManager {
             completion(nil, nil)
             return
         }
+        let task = URLSession.shared.dataTask(with: url) {data, _, error in
+            guard let data = data else {
+                completion(nil, error)
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let decodedData = try decoder.decode(MenuItems.self, from: data)
+                completion(decodedData.items, nil)
+            } catch let error {
+                completion(nil, error)
+            }
+        }
+        task.resume()
         
     }
 }
