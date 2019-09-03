@@ -10,6 +10,7 @@
 		520D02AA231C606700E9B49F /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D02A9231C606700E9B49F /* ItemViewController.swift */; };
 		5230D7D9231EE76000BC7F61 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230D7D8231EE76000BC7F61 /* OrderTableViewController.swift */; };
 		5230D7DB231EE7D000BC7F61 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230D7DA231EE7D000BC7F61 /* Order.swift */; };
+		5230D7DD231F115000BC7F61 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230D7DC231F115000BC7F61 /* OrderManager.swift */; };
 		52365C34231AA680009CEC96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52365C33231AA680009CEC96 /* AppDelegate.swift */; };
 		52365C39231AA680009CEC96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52365C37231AA680009CEC96 /* Main.storyboard */; };
 		52365C3B231AA682009CEC96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52365C3A231AA682009CEC96 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		520D02A9231C606700E9B49F /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		5230D7D8231EE76000BC7F61 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		5230D7DA231EE7D000BC7F61 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		5230D7DC231F115000BC7F61 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
 		52365C30231AA680009CEC96 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52365C33231AA680009CEC96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52365C38231AA680009CEC96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				52365C4D231AB091009CEC96 /* NetworkManager.swift */,
 				52365C51231B0F4C009CEC96 /* CellManager.swift */,
+				5230D7DC231F115000BC7F61 /* OrderManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				52365C4B231AAF93009CEC96 /* Categories.swift in Sources */,
 				5230D7D9231EE76000BC7F61 /* OrderTableViewController.swift in Sources */,
 				52365C52231B0F4C009CEC96 /* CellManager.swift in Sources */,
+				5230D7DD231F115000BC7F61 /* OrderManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
