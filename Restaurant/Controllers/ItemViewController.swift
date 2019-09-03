@@ -40,6 +40,7 @@ class ItemViewController: UIViewController {
             self.addToOrderButton.transform = CGAffineTransform(scaleX: 3, y: 3)
             self.addToOrderButton.transform = CGAffineTransform.identity
         }
+        OrderManager.shared.order.menuItems.append(menuItem)
         
     }
     
