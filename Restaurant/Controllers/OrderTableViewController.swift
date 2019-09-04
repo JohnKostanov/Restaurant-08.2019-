@@ -12,6 +12,9 @@ class OrderTableViewController: UITableViewController {
     // MARK: - Constants
     let cellManager = CellManager()
     
+    // MARK: - Stored Properties
+    var minutes = 0
+    
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,12 @@ class OrderTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "OrderConfirmationSegue" else { return }
+        let destination = segue.destination as! OrderConfirmationViewController
+        destination.minutes = minutes
+    }
+    
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
     }
