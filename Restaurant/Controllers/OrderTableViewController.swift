@@ -34,7 +34,7 @@ class OrderTableViewController: UITableViewController {
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        
+        OrderManager.shared.order = Order()
     }
     
     // MARK: - UITableViewSource
