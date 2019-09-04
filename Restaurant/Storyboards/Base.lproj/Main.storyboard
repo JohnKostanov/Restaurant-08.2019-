@@ -67,7 +67,9 @@
                             <outlet property="delegate" destination="Tjv-T9-kUV" id="hPt-XD-Vc5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Order" id="K9d-nc-DRT"/>
+                    <navigationItem key="navigationItem" title="Order" id="K9d-nc-DRT">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" style="done" id="AMm-3u-TP9"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="dfv-98-tU9" kind="show" identifier="OrderConfirmationSegue" id="ziT-GQ-4wm"/>
                     </connections>

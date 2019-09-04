@@ -16,7 +16,7 @@ class CellManager {
     
     func configure(_ cell: UITableViewCell, with menuItem: MenuItem, for tableView: UITableView, indexPath: IndexPath) {
         cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text =  menuItem.formatterPrice
+        cell.detailTextLabel?.text =  menuItem.price.formattedHundres
         if let image = menuItem.image {
             cell.imageView?.image = image
         } else {

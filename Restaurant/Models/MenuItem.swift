@@ -44,9 +44,3 @@ class MenuItem: Codable {
         case imageURL = "image_url"
     }
 }
-
-extension MenuItem {
-    var formatterPrice: String {
-        return String(format: "$%.2f", price)
-    }
-}

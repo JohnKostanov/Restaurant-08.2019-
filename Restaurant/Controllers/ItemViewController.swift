@@ -29,7 +29,7 @@ class ItemViewController: UIViewController {
     func updateUI() {
         navigationItem.title = menuItem.name
         imageView.image = menuItem.image
-        priceLabel.text = menuItem.formatterPrice
+        priceLabel.text = menuItem.price.formattedHundres
         detailTextLabel.text = menuItem.detailText
         
     }

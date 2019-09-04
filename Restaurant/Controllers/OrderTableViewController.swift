@@ -47,4 +47,23 @@ class OrderTableViewController: UITableViewController {
         cellManager.configure(cell, with: menuItem, for: tableView, indexPath: indexPath)
         return cell
     }
+    
+    // MARK: - Custom Methods
+    func uploadOrder() {
+        
+    }
+    
+    // MARK: - Actions
+    @IBAction func submitTapped(_ sender: UIBarButtonItem) {
+        let orderTotal = OrderManager.shared.order.menuItems.reduce(0) { $0 + $1.price }
+        
+        orderTotal.formattedHundres
+        
+        let alert = UIAlertController(title: "Confirm Order", message: "You are about to submit your order with a total of \(orderTotal.formattedHundres)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Submit", style: .default) { _ in
+            self.uploadOrder()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
+    }
 }
