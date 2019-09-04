@@ -11,6 +11,7 @@ import UIKit
 class NetworkManager {
     let baseURL = URL(string: "http://server.getoutfit.ru:8090")!
     
+    // MARK: - Get Methods
     func getCategories(completion: @escaping ([String]?, Error?) -> Void) {
          let url = baseURL.appendingPathComponent("categories")
         let task = URLSession.shared.dataTask(with: url) {data, _, error in
@@ -71,5 +72,10 @@ class NetworkManager {
             completion(image, nil)
         }
         task.resume()
+    }
+    
+    // MARK: - POST Methods
+    func submitOrder(forMenuIDs menuIDs: [Int], completion: @escaping (Int?, Error?) -> Void) {
+        
     }
 }

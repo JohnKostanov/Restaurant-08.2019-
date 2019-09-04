@@ -11,6 +11,7 @@ import UIKit
 class OrderTableViewController: UITableViewController {
     // MARK: - Constants
     let cellManager = CellManager()
+    let networkManager = NetworkManager()
     
     // MARK: - Stored Properties
     var minutes = 0
@@ -50,7 +51,21 @@ class OrderTableViewController: UITableViewController {
     
     // MARK: - Custom Methods
     func uploadOrder() {
-        
+        let menuIDs = OrderManager.shared.order.menuItems.map { $0.id }
+        networkManager.submitOrder(forMenuIDs: menuIDs) { minutes, error in
+            if let error = error {
+                print(#line, #function, "ERROR: \(error.localizedDescription)")
+            } else {
+                guard let minutes = minutes else {
+                    print(#line, #function, "ERROR: didn't get minutes from server")
+                    return
+                }
+                self.minutes = minutes
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "OrderConfirmationSegue", sender: nil)
+                }
+            }
+        }
     }
     
     // MARK: - Actions
