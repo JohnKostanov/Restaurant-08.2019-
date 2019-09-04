@@ -25,6 +25,7 @@
 		52947882231BC19800E14DF0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52947881231BC19800E14DF0 /* MenuTableViewController.swift */; };
 		52EFAF37231FB0CF00345692 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFAF36231FB0CF00345692 /* OrderConfirmationViewController.swift */; };
 		52EFAF39231FB79100345692 /* Double + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFAF38231FB79100345692 /* Double + Extension.swift */; };
+		52EFAF3B231FD4BF00345692 /* PreperationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFAF3A231FD4BF00345692 /* PreperationTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		52947881231BC19800E14DF0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		52EFAF36231FB0CF00345692 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		52EFAF38231FB79100345692 /* Double + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extension.swift"; sourceTree = "<group>"; };
+		52EFAF3A231FD4BF00345692 /* PreperationTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreperationTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				5275EAF2231B2A5D0061DC28 /* MenuItem.swift */,
 				5275EAF4231B2A970061DC28 /* MenuItems.swift */,
 				5230D7DA231EE7D000BC7F61 /* Order.swift */,
+				52EFAF3A231FD4BF00345692 /* PreperationTime.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				52365C34231AA680009CEC96 /* AppDelegate.swift in Sources */,
 				5275EAF8231B2E1F0061DC28 /* URL + Extension.swift in Sources */,
 				5230D7DB231EE7D000BC7F61 /* Order.swift in Sources */,
+				52EFAF3B231FD4BF00345692 /* PreperationTime.swift in Sources */,
 				5275EAF3231B2A5D0061DC28 /* MenuItem.swift in Sources */,
 				5275EAF5231B2A970061DC28 /* MenuItems.swift in Sources */,
 				52EFAF39231FB79100345692 /* Double + Extension.swift in Sources */,

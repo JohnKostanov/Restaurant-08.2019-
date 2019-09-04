@@ -87,16 +87,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zsj-aU-rIf">
-                                <rect key="frame" x="177.5" y="418" width="59.5" height="60"/>
+                                <rect key="frame" x="10" y="418" width="394" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyL-pW-NMN">
-                                        <rect key="frame" x="0.0" y="0.0" width="59.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV8-Fw-wwl">
-                                        <rect key="frame" x="0.0" y="30" width="59.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="394" height="30"/>
                                         <state key="normal" title="Dismiss"/>
                                         <connections>
                                             <segue destination="KjH-ed-OWF" kind="unwind" unwindAction="unwind:" id="Qad-4m-1fC"/>
@@ -107,7 +107,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zsj-aU-rIf" firstAttribute="centerX" secondItem="PCF-LX-ghl" secondAttribute="centerX" id="S35-FM-4Oi"/>
+                            <constraint firstItem="zsj-aU-rIf" firstAttribute="leading" secondItem="ww3-72-0Px" secondAttribute="leading" constant="10" id="bWw-Rx-ybj"/>
+                            <constraint firstItem="ww3-72-0Px" firstAttribute="trailing" secondItem="zsj-aU-rIf" secondAttribute="trailing" constant="10" id="pn7-Ka-hbY"/>
                             <constraint firstItem="zsj-aU-rIf" firstAttribute="centerY" secondItem="PCF-LX-ghl" secondAttribute="centerY" id="w0Y-G2-0ld"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ww3-72-0Px"/>
