@@ -69,25 +69,53 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Order" id="K9d-nc-DRT"/>
                     <connections>
-                        <segue destination="dfv-98-tU9" kind="show" id="ziT-GQ-4wm"/>
+                        <segue destination="dfv-98-tU9" kind="show" identifier="OrderConfirmationSegue" id="ziT-GQ-4wm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lke-zi-NM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="737.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Confirmation View Controller-->
         <scene sceneID="LNp-jW-nxN">
             <objects>
-                <viewController id="dfv-98-tU9" sceneMemberID="viewController">
+                <viewController id="dfv-98-tU9" customClass="OrderConfirmationViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCF-LX-ghl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zsj-aU-rIf">
+                                <rect key="frame" x="177.5" y="418" width="59.5" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyL-pW-NMN">
+                                        <rect key="frame" x="0.0" y="0.0" width="59.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV8-Fw-wwl">
+                                        <rect key="frame" x="0.0" y="30" width="59.5" height="30"/>
+                                        <state key="normal" title="Dismiss"/>
+                                        <connections>
+                                            <segue destination="KjH-ed-OWF" kind="unwind" unwindAction="unwind:" id="Qad-4m-1fC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zsj-aU-rIf" firstAttribute="centerX" secondItem="PCF-LX-ghl" secondAttribute="centerX" id="S35-FM-4Oi"/>
+                            <constraint firstItem="zsj-aU-rIf" firstAttribute="centerY" secondItem="PCF-LX-ghl" secondAttribute="centerY" id="w0Y-G2-0ld"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ww3-72-0Px"/>
                     </view>
+                    <connections>
+                        <outlet property="timeRemainingLabel" destination="TyL-pW-NMN" id="c8v-5c-i0B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7O-5n-FWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KjH-ed-OWF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2197.1014492753625" y="737.94642857142856"/>
         </scene>

@@ -23,6 +23,7 @@
 		5275EAF5231B2A970061DC28 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275EAF4231B2A970061DC28 /* MenuItems.swift */; };
 		5275EAF8231B2E1F0061DC28 /* URL + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275EAF7231B2E1F0061DC28 /* URL + Extension.swift */; };
 		52947882231BC19800E14DF0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52947881231BC19800E14DF0 /* MenuTableViewController.swift */; };
+		52EFAF37231FB0CF00345692 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFAF36231FB0CF00345692 /* OrderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5275EAF4231B2A970061DC28 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		5275EAF7231B2E1F0061DC28 /* URL + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Extension.swift"; sourceTree = "<group>"; };
 		52947881231BC19800E14DF0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		52EFAF36231FB0CF00345692 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				52947881231BC19800E14DF0 /* MenuTableViewController.swift */,
 				520D02A9231C606700E9B49F /* ItemViewController.swift */,
 				5230D7D8231EE76000BC7F61 /* OrderTableViewController.swift */,
+				52EFAF36231FB0CF00345692 /* OrderConfirmationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				52365C50231B05C9009CEC96 /* CategoryTableViewController.swift in Sources */,
 				52947882231BC19800E14DF0 /* MenuTableViewController.swift in Sources */,
 				52365C4E231AB091009CEC96 /* NetworkManager.swift in Sources */,
+				52EFAF37231FB0CF00345692 /* OrderConfirmationViewController.swift in Sources */,
 				52365C34231AA680009CEC96 /* AppDelegate.swift in Sources */,
 				5275EAF8231B2E1F0061DC28 /* URL + Extension.swift in Sources */,
 				5230D7DB231EE7D000BC7F61 /* Order.swift in Sources */,
